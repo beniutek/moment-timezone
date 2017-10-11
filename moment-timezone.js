@@ -24,13 +24,16 @@
 	// 	return moment;
 	// }
 
+	if(moment.version === undefined) {
+		moment = moment.default
+	}
+
 	var VERSION = "0.5.13",
 		zones = {},
 		links = {},
 		names = {},
 		guesses = {},
 		cachedGuess,
-
 		momentVersion = moment.version.split('.'),
 		major = +momentVersion[0],
 		minor = +momentVersion[1];
