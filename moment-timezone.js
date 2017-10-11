@@ -24,6 +24,10 @@
 	// 	return moment;
 	// }
 
+	if (moment.version === undefined) {
+		moment = moment.default;
+	}
+
 	var VERSION = "0.5.13",
 		zones = {},
 		links = {},
